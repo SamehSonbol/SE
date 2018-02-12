@@ -1,1 +1,83 @@
 
+git init #make a new repositry
+
+ 
+
+git clone https://github.com/SamehSonbol/SE.git  #to download content
+
+
+
+CD SE #to go in folder
+
+ 
+
+
+git rm "3rd Section Branches" # to delete file
+ 
+
+
+git commit - m "mesage"
+ 
+ 
+
+q then enter
+ 
+ 
+
+:q! # to exit the commit page
+ 
+
+
+
+
+ git status #to know what happend
+ 
+ 
+
+git log
+
+
+git revert
+
+git push
+
+
+echo > readME.md   #to make a new file
+
+
+git add README.md
+
+
+git commit - m # to describe the added file
+
+
+git checkout -b #to switch to new branch
+
+
+git commit - m
+
+
+git add README.md
+
+
+git branch ReadME
+
+git checkout ReadMe
+
+git commit -m  #for new branch#
+
+git add README.md
+
+git checkout master
+
+git merge ReadMe
+
+git add All MY Commands
+
+git commit -m 
+
+git push
+
+
+
+
