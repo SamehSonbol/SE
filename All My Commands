@@ -1,4 +1,202 @@
 
+------------------------------------------Day 1---------------------------
+
+Sameh@DELL-LTE MINGW64 ~ (master)
+$ mkdir Submission
+
+Sameh@DELL-LTE MINGW64 ~ (master)
+$ git init
+Reinitialized existing Git repository in C:/Users/Sameh/.git/
+
+Sameh@DELL-LTE MINGW64 ~ (master)
+$ cd Submission
+
+Sameh@DELL-LTE MINGW64 ~/Submission (master)
+$ git init
+Initialized empty Git repository in C:/Users/Sameh/Submission/.git/
+
+Sameh@DELL-LTE MINGW64 ~/Submission (master)
+$ git clone "https://github.com/SamehSonbol/SE.git"
+Cloning into 'SE'...
+remote: Counting objects: 27, done.
+remote: Compressing objects: 100% (20/20), done.
+remote: Total 27 (delta 8), reused 12 (delta 4), pack-reused 0
+Unpacking objects: 100% (27/27), done.
+
+Sameh@DELL-LTE MINGW64 ~/Submission (master)
+$ ls
+SE/
+
+Sameh@DELL-LTE MINGW64 ~/Submission (master)
+$ cd SE
+
+Sameh@DELL-LTE MINGW64 ~/Submission/SE (master)
+$ ls
+'3rd Section Branches'   'All My Commands'   README.md
+'5th Section Workflows'  'Getstarted 1.1'
+
+Sameh@DELL-LTE MINGW64 ~/Submission/SE (master)
+$ git rm '3rd Section Branches'
+rm '3rd Section Branches'
+
+Sameh@DELL-LTE MINGW64 ~/Submission/SE (master)
+$ git commit -m "3rd Section file has been removed"
+[master 7f33add] 3rd Section file has been removed
+ 1 file changed, 13 deletions(-)
+ delete mode 100644 3rd Section Branches
+
+Sameh@DELL-LTE MINGW64 ~/Submission/SE (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+Sameh@DELL-LTE MINGW64 ~/Submission/SE (master)
+$ git log
+commit 7f33add98d7ff1e2f2498f8ec4b24740ea1c6c84 (HEAD -> master)
+Author: SamehSonbol <samehsafwatsonbol@gmail.com>
+Date:   Fri Feb 16 11:22:02 2018 +0200
+
+    3rd Section file has been removed
+
+commit d98faff4403b56ceed3d886bf827ce945d317ed7 (origin/master, origin/ReadMe, origin/HEAD)
+Author: SamehSonbol <samehsafwatsonbol@gmail.com>
+Date:   Tue Feb 13 00:03:33 2018 +0200
+
+    Revert "last delete for 3.1 git branches file"
+
+    This reverts commit a6021bbd65816eb53edf49b1fcd88a7a3b042b54.
+
+commit a6021bbd65816eb53edf49b1fcd88a7a3b042b54
+Author: SamehSonbol <samehsafwatsonbol@gmail.com>
+Date:   Tue Feb 13 00:02:17 2018 +0200
+
+    last delete for 3.1 git branches file
+
+commit 603f87a289ebb687f5b5d7a77d1cbe654b0860d6
+Author: SamehSonbol <samehsafwatsonbol@gmail.com>
+
+Sameh@DELL-LTE MINGW64 ~/Submission/SE (master)
+$ git revert 7f33add98d7ff1e2f2498f8ec4b24740ea1c6c84
+[master 9788d54] Revert "3rd Section file has been removed"
+ 1 file changed, 13 insertions(+)
+ create mode 100644 3rd Section Branches
+
+Sameh@DELL-LTE MINGW64 ~/Submission/SE (master)
+$ git commit -m "3rd Section file has been deleted and restored in step d "
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+Sameh@DELL-LTE MINGW64 ~/Submission/SE (master)
+$ git push
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 439 bytes | 109.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/SamehSonbol/SE.git
+   d98faff..9788d54  master -> master
+
+--------------------------------------------Day 2--------------------------
+Sameh@DELL-LTE MINGW64 ~/Submission/SE (master)
+$ touch README.md
+
+Sameh@DELL-LTE MINGW64 ~/Submission/SE (master)
+$ git add README.md
+
+Sameh@DELL-LTE MINGW64 ~/Submission/SE (master)
+$ git branch ReadMe
+
+Sameh@DELL-LTE MINGW64 ~/Submission/SE (master)
+$ git checkout ReadMe
+Switched to branch 'ReadMe'
+
+Sameh@DELL-LTE MINGW64 ~/Submission/SE (ReadMe)
+$ git add README.md
+
+Sameh@DELL-LTE MINGW64 ~/Submission/SE (ReadMe)
+$ ls
+'3rd Section Branches'   'All My Commands'   README.md
+'5th Section Workflows'  'Getstarted 1.1'
+
+Sameh@DELL-LTE MINGW64 ~/Submission/SE (ReadMe)
+$ git commit -m"a new branch ReadMe is added and README.md is in the branch"
+On branch ReadMe
+nothing to commit, working tree clean
+
+Sameh@DELL-LTE MINGW64 ~/Submission/SE (ReadMe)
+$ git add .
+
+Sameh@DELL-LTE MINGW64 ~/Submission/SE (ReadMe)
+$ ls
+'3rd Section Branches'   'All My Commands'   README.md
+'5th Section Workflows'  'Getstarted 1.1'
+
+Sameh@DELL-LTE MINGW64 ~/Submission/SE (ReadMe)
+$ git commit -m"a new branch ReadMe is added and README.md is in the branch"
+On branch ReadMe
+nothing to commit, working tree clean
+
+Sameh@DELL-LTE MINGW64 ~/Submission/SE (ReadMe)
+$ git merge ReadMe
+Already up to date.
+
+Sameh@DELL-LTE MINGW64 ~/Submission/SE (ReadMe)
+$ git checkout Master
+Switched to branch 'Master'
+-----------------------------------Day 3-----------------------------------
+Sameh@DELL-LTE MINGW64 ~/Submission/SE (Master)
+$ git checkout ReadMe
+Switched to branch 'ReadMe'
+
+Sameh@DELL-LTE MINGW64 ~/Submission/SE (ReadMe)
+$ git add README.md
+
+Sameh@DELL-LTE MINGW64 ~/Submission/SE (ReadMe)
+$ ls
+'3rd Section Branches'   'All My Commands'   README.md
+'5th Section Workflows'  'Getstarted 1.1'
+
+Sameh@DELL-LTE MINGW64 ~/Submission/SE (ReadMe)
+$ git commit -m"README.md is added to a new branck called ReadMe"
+On branch ReadMe
+nothing to commit, working tree clean
+
+Sameh@DELL-LTE MINGW64 ~/Submission/SE (ReadMe)
+$ git checkout Master
+Switched to branch 'Master'
+
+Sameh@DELL-LTE MINGW64 ~/Submission/SE (Master)
+$ git merge Master
+Already up to date.
+
+Sameh@DELL-LTE MINGW64 ~/Submission/SE (Master)
+$ git merge ReadMe
+Already up to date.
+
+Sameh@DELL-LTE MINGW64 ~/Submission/SE (Master)
+$ git status
+On branch Master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   All My Commands
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+
+
+-------------------------------------------------------------------------
+
+
+
 git init #make a new repositry
 
  
@@ -42,42 +240,20 @@ git revert
 git push
 
 
-echo > readME.md   #to make a new file
+touch ReadME.md   #to make a new file
 
-
-git add README.md
-
-
-git commit - m # to describe the added file
-
-
-git checkout -b #to switch to new branch
-
-
-git commit - m
-
-
-git add README.md
-
-
-git branch ReadME
+git branch ReadMe
 
 git checkout ReadMe
 
-git commit -m  #for new branch#
-
-git add README.md
-
-git checkout master
+git add README.md 
 
 git merge ReadMe
 
-git add All MY Commands
+git checkout Master
 
-git commit -m 
+git status 
 
-git push
-
-
+git commit -m
 
 
